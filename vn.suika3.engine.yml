@@ -6,8 +6,10 @@ command: suika3-launcher
 
 finish-args:
   - --socket=wayland
+  - --socket=fallback-x11
   - --device=dri
   - --socket=pulseaudio
+  - --share=ipc
 
 modules:
   - name: suika3
@@ -29,4 +31,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/awemorris/suika3.git
-        commit: 0d55427c3fca38d33b300da742f7b130136e0196
+        commit: 299c3759e716ee4fd2ac1a4557049774fcdfd5a4
