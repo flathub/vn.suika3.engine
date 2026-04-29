@@ -5,7 +5,8 @@ sdk: org.freedesktop.Sdk
 command: suika3-launcher
 
 finish-args:
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --device=dri
   - --socket=pulseaudio
   - --share=ipc
@@ -15,7 +16,7 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - "-DCMAKE_BUILD_TYPE=Release"
-      - "-DSUIKA_TARGET_LINUX=ON"
+      - "-DSUIKA_TARGET_LINUX_WAYLAND=ON"
       - "-DSUIKA_ENABLE_INSTALL=ON"
       - "-DSUIKA_ENABLE_FREEDESKTOP=ON"
       - "-DSUIKA_ENABLE_FLATPAK=ON"
@@ -30,4 +31,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/awemorris/suika3.git
-        commit: e7ad4807d2b67d6671e23d12a0afbeaafd3ab5cb
+        commit: 32fecdc44e3b9c56f942ffd40acecb0ec6ad1261
