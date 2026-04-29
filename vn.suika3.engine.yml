@@ -30,4 +30,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/awemorris/suika3.git
-        commit: e7ad4807d2b67d6671e23d12a0afbeaafd3ab5cb
+        commit: 38c8df2103bb5cf2b628df2e63eb5d27ba4417e0
