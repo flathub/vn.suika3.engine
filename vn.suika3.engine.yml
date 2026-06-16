@@ -16,19 +16,20 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - "-DCMAKE_BUILD_TYPE=Release"
-      - "-DSUIKA_TARGET_LINUX_WAYLAND=ON"
+      - "-DSUIKA_TARGET_LINUX=ON"
       - "-DSUIKA_ENABLE_INSTALL=ON"
       - "-DSUIKA_ENABLE_FREEDESKTOP=ON"
       - "-DSUIKA_ENABLE_FLATPAK=ON"
-      - "-DSUIKA_ENABLE_DIST=ON"
+      - "-DSUIKA_ENABLE_DIST_SINGLE=ON"
       - "-DSUIKA_ENABLE_GST=ON"
       - "-DSUIKA_ENABLE_JIT=ON"
       - "-DSUIKA_ENABLE_I18N=ON"
       - "-DSUIKA_ENABLE_PACK=ON"
-      - "-DSUIKA_ENABLE_BYTECOMP=ON"
-      - "-DSUIKA_ENABLE_AOTCOMP=ON"
+      - "-DSUIKA_ENABLE_BCC=ON"
+      - "-DSUIKA_ENABLE_AOTC=ON"
       - "-DSUIKA_ENABLE_UNSAFE=ON"
+      - "-DSUIKA_ENABLE_PORTAL=ON"
     sources:
       - type: git
         url: https://github.com/awemorris/suika3.git
-        commit: 32fecdc44e3b9c56f942ffd40acecb0ec6ad1261
+        commit: d13a8988d2bcbe05e419d55e4a12bced3faf2bc7
